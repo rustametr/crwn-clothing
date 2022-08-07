@@ -7,7 +7,7 @@ import { useContext } from 'react'
 import './cart-icon.styles.scss'
 
 const CartIcon = () => {
-    const { statusDropdown, setStatusDropdown } = useContext(CartDropdownContext);
+    const { statusDropdown, setStatusDropdown, cartItemsAmount } = useContext(CartDropdownContext);
 
     const cartIconClickHandler = () => {
         setStatusDropdown(!statusDropdown);
@@ -16,7 +16,7 @@ const CartIcon = () => {
     return (
         <div className='cart-icon-container' onClick={cartIconClickHandler}>
             <ShoppingIcon className='shopping-icon' />
-            <span className='item-count'>0</span>
+            <span className='item-count'>{cartItemsAmount}</span>
         </div>
     )
 }

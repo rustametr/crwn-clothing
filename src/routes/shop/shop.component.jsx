@@ -12,7 +12,7 @@ const Shop = () => {
         <div className='products-container'>
             {projucts.map((product) => {
                 return (
-                    <ProductCard key={product.id} product={product} />
+                    <ProductCard key={product.id} product={product}/>
                 )
             })}
         </div>
