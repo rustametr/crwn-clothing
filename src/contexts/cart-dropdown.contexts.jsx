@@ -8,7 +8,7 @@ const addCartItem = (cartItems, productToAdd) => {
         }
     }
     productToAdd.quantity = 1;
-    return [...cartItems, productToAdd]
+    return [...cartItems, productToAdd];
 }
 
 const decrementItemQuantity = (cartItems, productToChange) => {
@@ -80,7 +80,7 @@ export const CartDropdownProvider = ({ children }) => {
     const deleteCartItem = (productToDelete) => {
 
         const filteredCartItems = cartItems.filter((cartItem) => {
-            return cartItem.id != productToDelete.id;
+            return cartItem.id !== productToDelete.id;
         })
 
         setCartItems([...filteredCartItems])
